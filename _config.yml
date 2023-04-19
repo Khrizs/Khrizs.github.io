@@ -149,7 +149,6 @@ sitemap: true
 header_pages:
   - index.html
   - about.html
-  - source.html
 
 # Page default value
 defaults:
