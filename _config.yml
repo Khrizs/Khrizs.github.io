@@ -24,9 +24,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: KhrispDev
+title: Khrizs
 email: iftw+gh@duck.com
-author: KhrispDev
+author: Khrizs
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -43,12 +43,10 @@ author: KhrispDev
 copyright: "(cleft) 2022-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the website for Christopher (KhrispDev)!
-  I mainly experiment with HTML and other web design
-  elements to create better websites.
+  Website of Khrizs with epic things
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://khrispdev.github.io" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://khrizs.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
