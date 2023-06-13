@@ -4,11 +4,11 @@ title: Testing!
 subtitle: Testing, Testing, Testing, Testin- AHHHHHHHHHHHHHH!
 categories: testing
 banner:
-  video: https://khrispdev.github.io/web-assets/testing.mp4
+  video: https://khrizs.github.io/web-assets/testing.mp4
   loop: true
   volume: 0.8
   start_at: 0
-  image: https://khrispdev.github.io/web-assets/testing.jpg
+  image: https://khrizs.github.io/web-assets/testing.jpg
   opacity: 0.618
   background: "#000"
   height: "100vh"
