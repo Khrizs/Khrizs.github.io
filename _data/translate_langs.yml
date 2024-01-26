@@ -9,10 +9,10 @@
   img: https://cdn.countryflags.com/thumbs/france/flag-400.png
   text: French
   
-- lang: zh-CN
-  img: https://cdn.countryflags.com/thumbs/china/flag-400.png
-  text: Chinese-Simplified
+#- lang: zh-CN
+#  img: https://cdn.countryflags.com/thumbs/china/flag-400.png
+#  text: Chinese-Simplified
  
-- lang: zh-TW
-  img: https://cdn.countryflags.com/thumbs/taiwan/flag-400.png
-  text: Chinese-Traditional
+#- lang: zh-TW
+#  img: https://cdn.countryflags.com/thumbs/taiwan/flag-400.png
+#  text: Chinese-Traditional
