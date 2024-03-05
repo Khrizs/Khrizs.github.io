@@ -1,0 +1,1 @@
+Sitemap: https://khrizs.github.io/jekyll-theme-yat/sitemap.xml
