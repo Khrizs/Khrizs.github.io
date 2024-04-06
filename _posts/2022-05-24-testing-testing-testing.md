@@ -4,7 +4,7 @@ title: Testing!
 subtitle: Testing, Testing, Testing, Testin- AHHHHHHHHHHHHHH!
 categories: testing
 banner:
-  video: https://khrizs.github.io/web-assets/testing.mp4
+  video: https://khrizs.github.io/assets/videos/testing.mp4
   loop: true
   volume: 0.8
   start_at: 0
