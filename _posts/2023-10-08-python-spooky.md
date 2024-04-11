@@ -2,7 +2,7 @@
 layout: post
 title: Python Testing
 categories: testing
-tags: [testing]
+tags: [testing,python]
 ---
 
 # Woah spooky python 😱
