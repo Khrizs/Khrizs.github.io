@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: default
 title: Privacy Policy
 ---
 Our Privacy Policy was last updated on 15 May 2024.
