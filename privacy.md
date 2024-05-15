@@ -90,11 +90,11 @@ By using Our Services, CloudFlare collects statistical data and uses a cookie to
 - 
 If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser which may affect your ability to use Our Services.
 
-CloudFlare's privacy policy is found here: https://www.cloudflare.com/privacypolicy/
+CloudFlare's privacy policy is found here: [https://www.cloudflare.com/privacypolicy/](https://www.cloudflare.com/privacypolicy/)
 
 ## Changes to this Privacy Policy
 We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
 
 ## Contact Us
 If you have any questions about this Privacy Policy, You can contact us:
-- By sending us an email: privacy@khris.win
+- By sending us an email: [privacy@khris.win][mailto:privacy@khris.win]
