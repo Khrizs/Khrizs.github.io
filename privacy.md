@@ -97,4 +97,4 @@ We may update Our Privacy Policy from time to time. We will notify You of any ch
 
 ## Contact Us
 If you have any questions about this Privacy Policy, You can contact us:
-- By sending us an email: [privacy@khris.win][mailto:privacy@khris.win]
+- By sending us an email: [privacy@khris.win](mailto:privacy@khris.win)
