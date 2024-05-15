@@ -73,6 +73,23 @@ If We need to rely on consent as a legal basis for processing Your information a
 ## Links to Other Websites
 Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
 
+## CloudFlare
+To secure our website and to optimize loading times, we use the CloudFlare CDN (content delivery network) which is a service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, hereinafter referred to as "CloudFlare".
+
+By using Our Services, CloudFlare collects statistical data and uses a cookie to deliver their service. Data includes:
+
+- your IP address;
+- the page(s) on our site that you access;
+- type and version of internet browser you are using;
+- your operating system;
+- the website from which you came prior to visiting our website (referrer URL);
+- your length of stay on our site; and 
+- the frequency with which our pages are accessed.
+- 
+If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser which may affect your ability to use Our Services.
+
+CloudFlare's privacy policy is found here: https://www.cloudflare.com/privacypolicy/
+
 ## Changes to this Privacy Policy
 We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
 
