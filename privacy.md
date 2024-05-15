@@ -1,6 +1,7 @@
 ---
 layout: privacy
 title: Privacy Policy
+date: 2024-05-15
 ---
 Our Privacy Policy was last updated on 15 May 2024.
 
