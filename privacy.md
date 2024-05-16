@@ -2,7 +2,6 @@
 layout: privacy
 title: Privacy Policy
 date: 2024-05-15
-last_modified_at: 2024-05-15
 ---
 Our Privacy Policy was last updated on 15 May 2024.
 
@@ -14,7 +13,6 @@ The words of which the initial letter is capitalized have meanings defined under
 
 ### Definitions
 For the purposes of this Privacy Policy:
-- "Account" means a unique account created for You to access our Service or parts of our Service.
 - "Company" (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Khrizs Industries
 - "Country" refers to Canada.
 - "Cookies" are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
@@ -31,7 +29,7 @@ For the purposes of this Privacy Policy:
 #### Personal Data
 While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
 - Usernames, Discord and/or Roblox
-- Account Indentifiers, Discord and/or Roblox
+- User Indentifiers, Discord and/or Roblox
 - Usage Data
 
 #### Usage Data
@@ -56,15 +54,11 @@ The Company may use Personal Data for the following purposes:
 ## Retention of Your Personal Data
 The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
 
-## Transfer of Your Personal Data
-Your information, including Personal Data, is processed in Canada and in any other places where Service Providors involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction. 
-
-Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
-
-The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
-
 ## Security of Your Personal Data
-The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+Our Services are built with security in mind. We take appropriate steps to ensure data is stored in a safe and secure manner as to prevent unauthorized access, alteration, loss, or publishing of information held by Us by:
+- Reviewing security practices
+- Using encryption of data
+- Restricting access to personal information to operators of Our Company.
 
 ### Detailed Information on the Processing of Your Personal Data
 #### Children's Privacy
@@ -76,7 +70,7 @@ If We need to rely on consent as a legal basis for processing Your information a
 Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
 
 ## CloudFlare
-To secure our website and to optimize loading times, we use the CloudFlare CDN (content delivery network) which is a service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, hereinafter referred to as "CloudFlare".
+To secure Our website and to optimize loading times, we use the CloudFlare CDN (content delivery network) which is a service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, hereinafter referred to as "CloudFlare".
 
 By using Our Services, CloudFlare collects statistical data and uses a cookie to deliver their service. Data includes:
 
