@@ -55,7 +55,7 @@ The Company may use Personal Data for the following purposes:
 The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
 
 ## Security of Your Personal Data
-Our Services are built with security in mind. We take appropriate steps to ensure data is stored in a safe and secure manner as to prevent unauthorized access, alteration, loss, or publishing of information held by Us by:
+Our Services are built with security in mind. We take appropriate steps to ensure data is stored in a safe and secure manner as to prevent unauthorized access, alteration, loss, or publishing of information We hold by:
 - Reviewing security practices
 - Using encryption of data
 - Restricting access to personal information to operators of Our Company.
