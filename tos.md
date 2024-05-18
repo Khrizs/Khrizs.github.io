@@ -3,7 +3,7 @@ layout: privacy
 title: Terms of Service
 date: 2024-05-18
 ---
-Terms of Service
+Our Terms of Service was last updated on 18 May 2024.
 
 These Terms of Service ("Terms") govern your access to and use of Khrizs Industries' website and services ("Service"). Please read these Terms carefully before using the Service.
 
