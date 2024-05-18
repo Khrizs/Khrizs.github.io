@@ -29,7 +29,7 @@ By accessing or using the Service, you agree to be bound by these Terms. If you 
 - Khrizs Industries shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with your use of the Service.
 
 ## Indemnification
-- You agree to indemnify and hold harmless [Company Name] and its officers, directors, employees, and agents from any claims, liabilities, damages, and expenses arising out of or in any way connected with your use of the Service or violation of these Terms.
+- You agree to indemnify and hold harmless Khrizs Industries and its officers, directors, employees, and agents from any claims, liabilities, damages, and expenses arising out of or in any way connected with your use of the Service or violation of these Terms.
 
 ## Modifications to Terms
 - Khrizs Industries reserves the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page.
