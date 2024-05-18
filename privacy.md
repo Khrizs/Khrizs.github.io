@@ -52,7 +52,15 @@ The Company may use Personal Data for the following purposes:
 - To provide and maintain our Service, including to monitor the usage of our Service.
 
 ## Retention of Your Personal Data
-The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
+We are committed to protecting the privacy and confidentiality of personal information entrusted to us by our users. As part of our privacy practices, we adhere to the principles outlined in the Personal Information Protection and Electronic Documents Act (PIPEDA) regarding the collection, use, and retention of personal information.
+
+We will retain personal information only for as long as necessary to fulfill the purposes for which it was collected, or as required by law. Once the purposes for which personal information was collected have been fulfilled and there is no longer a legal or business need to retain it, we will take steps to delete or anonymize the information.
+
+### Data Deletion
+If you wish to request the deletion of your personal information from our records, please contact us using the contact information provided below. We will promptly process your request, subject to any legal obligations or technical limitations that may prevent immediate deletion.
+
+### Backup and Archival Data
+Please note that deleted personal information may continue to exist in backup or archival copies for a limited period. However, such data will not be actively used or accessible by us except as required for legal or regulatory purposes.
 
 ## Security of Your Personal Data
 Our Services are built with security in mind. We take appropriate steps to ensure data is stored in a safe and secure manner as to prevent unauthorized access, alteration, loss, or publishing of information We hold by:
