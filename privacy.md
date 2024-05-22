@@ -13,7 +13,7 @@ The words of which the initial letter is capitalized have meanings defined under
 
 ### Definitions
 For the purposes of this Privacy Policy:
-- "Company" (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Khrizs Industries
+- "Company" (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Khrigsaw
 - "Country" refers to Canada.
 - "Cookies" are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
 - "Device" means any device that can access the Service such as a computer, a cell phone or a digital tablet.
