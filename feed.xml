@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2024-06-28T22:19:47+00:00</updated><id>/jekyll-theme-yat/feed.xml</id><title type="html">Khrigsaw</title><subtitle>epico</subtitle><entry><title type="html">aiohttp testing</title><link href="/jekyll-theme-yat/testing/2024/04/10/aiohttp-testing.html" rel="alternate" type="text/html" title="aiohttp testing" /><published>2024-04-10T00:00:00+00:00</published><updated>2024-04-10T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2024/04/10/aiohttp-testing</id><content type="html" xml:base="/jekyll-theme-yat/testing/2024/04/10/aiohttp-testing.html"><![CDATA[<h1 id="roblox-picture-getter">Roblox Picture Getter!</h1>
+
+<p>No web scraping with this one boys</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">json</span><span class="p">,</span><span class="n">aiohttp</span><span class="p">,</span><span class="n">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">bruh</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="p">.</span><span class="nc">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+        <span class="n">username</span>  <span class="o">=</span> <span class="sh">"</span><span class="s">Roblox</span><span class="sh">"</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://users.roblox.com/v1/usernames/users</span><span class="sh">"</span>
+        <span class="n">userIdRequestJSON</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">({</span><span class="sh">"</span><span class="s">usernames</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="n">username</span><span class="p">],</span> <span class="sh">"</span><span class="s">excludeBannedUsers</span><span class="sh">"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="sh">"</span><span class="s">accept</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">application/json</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">Content-Type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">application/json</span><span class="sh">"</span>
+        <span class="p">}</span>
+
+        <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">userIdRequestJSON</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
+            <span class="n">userIdReqContent</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="k">await</span> <span class="n">resp</span><span class="p">.</span><span class="nf">text</span><span class="p">())</span>
+            <span class="n">userId</span> <span class="o">=</span> <span class="n">userIdReqContent</span><span class="p">[</span><span class="sh">"</span><span class="s">data</span><span class="sh">"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">]</span>
+
+        <span class="n">iconImageRequestUrl</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=</span><span class="si">{</span><span class="n">userId</span><span class="si">}</span><span class="s">&amp;size=420x420&amp;format=Png&amp;isCircular=false</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">iconImageRequestUrl</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
+            <span class="n">iconImageReqContent</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="k">await</span> <span class="n">resp</span><span class="p">.</span><span class="nf">text</span><span class="p">())</span>
+            <span class="n">imageUrl</span> <span class="o">=</span> <span class="n">iconImageReqContent</span><span class="p">[</span><span class="sh">"</span><span class="s">data</span><span class="sh">"</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="sh">"</span><span class="s">imageUrl</span><span class="sh">"</span><span class="p">]</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">imageUrl</span><span class="p">)</span>
+
+<span class="n">asyncio</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="nf">bruh</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p>ok thaats it</p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><category term="python" /><summary type="html"><![CDATA[Roblox Picture Getter!]]></summary></entry><entry><title type="html">string randomizing</title><link href="/jekyll-theme-yat/testing/2024/04/10/string-randomizing.html" rel="alternate" type="text/html" title="string randomizing" /><published>2024-04-10T00:00:00+00:00</published><updated>2024-04-10T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2024/04/10/string-randomizing</id><content type="html" xml:base="/jekyll-theme-yat/testing/2024/04/10/string-randomizing.html"><![CDATA[<h1 id="conceal-your-super-secret-stuff">Conceal your super secret stuff</h1>
+
+<p>(don’t do this with super super secret stuff like passwords, use real encryption for that)</p>
+
+<p>The seed method from the built-in random can be used to randomize strings. In this case, a timestamp will create a different randomizer for the secret thing “tramp”. I use this to make unique identifiers in databases where some values can share alike names.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">random</span><span class="p">,</span> <span class="n">string</span>
+<span class="kn">from</span> <span class="n">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">random</span><span class="p">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">().</span><span class="nf">timestamp</span><span class="p">())</span>
+
+<span class="n">supersecretthing</span> <span class="o">=</span> <span class="sh">"</span><span class="s">tramp</span><span class="sh">"</span>
+<span class="n">supersecretrandomized</span> <span class="o">=</span> <span class="n">supersecretthing</span> <span class="o">+</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">choices</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="p">.</span><span class="n">digits</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">16</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">supersecretrandomized</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>ok thaats it</p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><category term="python" /><summary type="html"><![CDATA[Conceal your super secret stuff]]></summary></entry><entry><title type="html">How long is change?</title><link href="/jekyll-theme-yat/yap/2024/02/16/change.html" rel="alternate" type="text/html" title="How long is change?" /><published>2024-02-16T06:00:00+00:00</published><updated>2024-02-16T06:00:00+00:00</updated><id>/jekyll-theme-yat/yap/2024/02/16/change</id><content type="html" xml:base="/jekyll-theme-yat/yap/2024/02/16/change.html"><![CDATA[<p>How long is change? A day, a year, a decade? The smaller the time difference, the less we notice. How can the biggest changes create the biggest connection to ourselves in a world filled with constant movement. Appreciating the smallest achievments are the biggest steps towards seeing larger changes.</p>]]></content><author><name></name></author><category term="yap" /><category term="yap" /><summary type="html"><![CDATA[How long is change? A day, a year, a decade? The smaller the time difference, the less we notice. How can the biggest changes create the biggest connection to ourselves in a world filled with constant movement. Appreciating the smallest achievments are the biggest steps towards seeing larger changes.]]></summary></entry><entry><title type="html">Java Testing</title><link href="/jekyll-theme-yat/testing/2024/01/25/java-testing.html" rel="alternate" type="text/html" title="Java Testing" /><published>2024-01-25T00:00:00+00:00</published><updated>2024-01-25T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2024/01/25/java-testing</id><content type="html" xml:base="/jekyll-theme-yat/testing/2024/01/25/java-testing.html"><![CDATA[<h1 id="omg-java">omg java</h1>
+
+<p>sphere data from just a radius?? no way impossible!</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.swing.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.*</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">sphereRadius</span><span class="o">,</span><span class="n">sphereDiameter</span><span class="o">,</span><span class="n">sphereCircumference</span><span class="o">,</span><span class="n">sphereSurfaceArea</span><span class="o">,</span><span class="n">sphereVolume</span><span class="o">;</span> 
+    <span class="nc">String</span> <span class="n">sphereRadiusInput</span> <span class="o">=</span> <span class="nc">JOptionPane</span><span class="o">.</span><span class="na">showInputDialog</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span><span class="s">"What is the radius of the sphere?:"</span><span class="o">);</span>
+    <span class="n">sphereRadius</span> <span class="o">=</span> <span class="nc">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">sphereRadiusInput</span><span class="o">);</span>
+
+    <span class="n">sphereDiameter</span> <span class="o">=</span> <span class="n">sphereRadius</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="n">sphereCircumference</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">PI</span> <span class="o">*</span> <span class="n">sphereDiameter</span><span class="o">;</span>
+    <span class="n">sphereSurfaceArea</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="na">PI</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="n">sphereRadius</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+    <span class="n">sphereVolume</span> <span class="o">=</span> <span class="o">(</span><span class="mi">4</span><span class="n">f</span><span class="o">/</span><span class="mi">3</span><span class="n">f</span><span class="o">)</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="na">PI</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="n">sphereRadius</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+
+    <span class="nc">JOptionPane</span><span class="o">.</span><span class="na">showMessageDialog</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="s">"There sphere has a diameter of "</span><span class="o">+</span><span class="n">sphereDiameter</span><span class="o">+</span><span class="s">" units, a circumference of "</span><span class="o">+</span><span class="n">sphereCircumference</span><span class="o">+</span><span class="s">" units, a surface area of "</span><span class="o">+</span><span class="n">sphereSurfaceArea</span><span class="o">+</span><span class="s">" square units, and a volume of "</span><span class="o">+</span><span class="n">sphereVolume</span><span class="o">+</span><span class="s">" cubed units!"</span><span class="o">);</span>
+    
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>wowie</p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><summary type="html"><![CDATA[omg java]]></summary></entry><entry><title type="html">Python Testing</title><link href="/jekyll-theme-yat/testing/2023/10/08/python-spooky.html" rel="alternate" type="text/html" title="Python Testing" /><published>2023-10-08T00:00:00+00:00</published><updated>2023-10-08T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2023/10/08/python-spooky</id><content type="html" xml:base="/jekyll-theme-yat/testing/2023/10/08/python-spooky.html"><![CDATA[<h1 id="woah-spooky-python-">Woah spooky python 😱</h1>
+
+<p>Check if something is false with typehints omg!!</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isFalseType</span><span class="p">(</span><span class="n">string</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sh">"""</span><span class="s">
+    Args:
+        string: String of text to check
+    Return:
+        Bool: If string is falsy
+    </span><span class="sh">"""</span>
+    <span class="k">if</span> <span class="nf">type</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">"</span><span class="s">Non string argument given to string arguement</span><span class="sh">"</span><span class="p">)</span>
+    
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nf">eval</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>ok thaats it</p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><category term="python" /><summary type="html"><![CDATA[Woah spooky python 😱]]></summary></entry><entry><title type="html">Javascript Testing</title><link href="/jekyll-theme-yat/testing/2022/06/06/javascript-testing.html" rel="alternate" type="text/html" title="Javascript Testing" /><published>2022-06-06T00:00:00+00:00</published><updated>2022-06-06T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2022/06/06/javascript-testing</id><content type="html" xml:base="/jekyll-theme-yat/testing/2022/06/06/javascript-testing.html"><![CDATA[<h1>Hello!</h1>
+
+<h2>This Button Hides and Shows Text</h2>
+
+<p id="demo">Boop!</p>
+
+<p><button id="hide" type="button" onclick="document.getElementById('demo').style.display='none'; document.getElementById('hide').style.display='none'; document.getElementById('show').style.display=''">Hide Text</button></p>
+
+<p><button id="show" type="button" onclick="document.getElementById('demo').style.display=''; document.getElementById('show').style.display='none'; document.getElementById('hide').style.display=''" style="display:none">Show Text</button></p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><summary type="html"><![CDATA[Hello!]]></summary></entry><entry><title type="html">Testing!</title><link href="/jekyll-theme-yat/testing/2022/05/24/testing-testing-testing.html" rel="alternate" type="text/html" title="Testing!" /><published>2022-05-24T00:00:00+00:00</published><updated>2022-05-24T00:00:00+00:00</updated><id>/jekyll-theme-yat/testing/2022/05/24/testing-testing-testing</id><content type="html" xml:base="/jekyll-theme-yat/testing/2022/05/24/testing-testing-testing.html"><![CDATA[<h1 id="hello">Hello!</h1>
+<p>This is my cool website!!!</p>
+
+<p>I am testing a video!!!</p>]]></content><author><name></name></author><category term="testing" /><category term="testing" /><summary type="html"><![CDATA[Hello! This is my cool website!!!]]></summary></entry></feed>
